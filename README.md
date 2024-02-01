@@ -17,3 +17,9 @@ Ce que le jeu fait :
 5) A la fin d'une partie :
  - Mets à jour le compteur des parties gagnées si nécessaire
  - demande si l'utilisateur veut continuer de jouer auquel cas une nouvelle partie se lance (avec inversion de la première personne qui commence la partie)
+
+
+ Avec la participation de Thomas Audevie, Raphaël Marcarini et Yassin Lamrabt
+ Merci à eux pour ce superbe travail d'équipe !
+
+ 
