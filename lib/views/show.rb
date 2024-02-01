@@ -10,9 +10,9 @@ class Show
         if cell_value == 0
             return " "
         elsif cell_value == 1
-            return "X"
+            return "X".blue
         else
-            return "O"
+            return "O".green
         end
     end
 
@@ -21,13 +21,14 @@ class Show
         @board.cells.each do |cell|
             array_symbol.push(symbolize_cells(cell.value))
         end
-
-        puts "|-A-|-B-|-C-|"
-        puts "| #{array_symbol[0]} | #{array_symbol[1]} | #{array_symbol[2]} |"
-        puts "|---|---|---|"
-        puts "| #{array_symbol[3]} | #{array_symbol[4]} | #{array_symbol[5]} |"
-        puts "|---|---|---|"
-        puts "| #{array_symbol[6]} | #{array_symbol[7]} | #{array_symbol[8]} |"
-        puts "|---|---|---|"
+        puts " "
+        puts "-|-A-|-B-|-C-|"
+        puts "1| #{array_symbol[0]} | #{array_symbol[1]} | #{array_symbol[2]} |"
+        puts "-|---|---|---|"
+        puts "2| #{array_symbol[3]} | #{array_symbol[4]} | #{array_symbol[5]} |"
+        puts "-|---|---|---|"
+        puts "3| #{array_symbol[6]} | #{array_symbol[7]} | #{array_symbol[8]} |"
+        puts "-|---|---|---|"
+        puts " "
     end
 end

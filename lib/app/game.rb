@@ -1,6 +1,10 @@
 class Game
   attr_accessor :player1, :player2, :board, :show
 
+  def text_to_ascii(text)
+    a = Artii::Base.new                 # Call this def if you want to transform a str into ascii
+    a.asciify(text)
+  end
 
   def initialize(player1, player2)
     @board = Board.new
@@ -10,6 +14,7 @@ class Game
   end
  
     def ask_player_play(player)
+      puts text_to_ascii("MORPION GAME").magenta
       puts "#{player1.name} : #{player1.symbol}"
       puts "#{player2.name} : #{player2.symbol}"
       @show.display
@@ -55,7 +60,8 @@ class Game
     
     def end_game(player, final)
       if final == true
-        puts "CONGRATS #{player.name} ! You won !" 
+        puts text_to_ascii("CONGRATS !").green
+        puts "#{player.name} ! You won !" 
       end
     end
     
@@ -85,6 +91,7 @@ class Game
           break
         end
         if turn == 9
+          puts text_to_ascii("DRAW !").cyan
           puts "Too bad, this is a draw !"
         end
       end
