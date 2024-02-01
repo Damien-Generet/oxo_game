@@ -2,7 +2,7 @@ class Application
 system("clear")
   
     a = Artii::Base.new                 # Call this def if you want to transform a str into ascii
-   puts a.asciify("Welcome Little Morpion !").magenta
+   puts a.asciify("Welcome Little Morpion !").light_blue
 
 
   puts Rainbow("Hello Player 1, what's your name ?").darkturquoise.underline
@@ -12,8 +12,8 @@ system("clear")
 
   system("clear")
 
-  player1 = Player.new(name=Rainbow(name1).darkturquoise, symbol = " ") 
-  player2 = Player.new(name=Rainbow(name2).hotpink, symbol = " ")
+  player1 = Player.new(name=Rainbow(name1).underline, symbol = " ") 
+  player2 = Player.new(name=Rainbow(name2).underline, symbol = " ")
   players = [player1, player2]
   player_picker = rand(0..1)
 
@@ -25,7 +25,6 @@ system("clear")
     second_player.symbol = Rainbow("O").hotpink    #* change the symbol and the value of the first and second player.
     starting_player.value = 1     #* The value is used to check wich case is empty and
     second_player.value = 2       #* how ''possess'' this or this case... .
-    
     game = Game.new(starting_player, second_player)
     game.run_game
 
@@ -44,9 +43,9 @@ system("clear")
     system("clear")
   end
 
-  print a.asciify("Thanks for playing ")
-  puts a.asciify("O").black
-  puts a.asciify("X").yellow
-  puts a.asciify("O").red
+  puts a.asciify("Thanks").black
+  puts a.asciify("for").yellow
+  puts a.asciify("playing").red
+  puts a.asciify("O X O")
 
 end

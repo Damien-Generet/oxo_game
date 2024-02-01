@@ -10,9 +10,9 @@ class Show
         if cell_value == 0
             return " "
         elsif cell_value == 1
-            return "X".blue
+            return Rainbow("X").darkturquoise
         else
-            return "O".green
+            return Rainbow("O").hotpink
         end
     end
 

@@ -14,7 +14,7 @@ class Game
   end
  
     def ask_player_play(player)
-      puts text_to_ascii("MORPION GAME").magenta
+      puts text_to_ascii("MORPION GAME").light_blue
       puts "#{player1.name} : #{player1.symbol}"
       puts "#{player2.name} : #{player2.symbol}"
       @show.display
