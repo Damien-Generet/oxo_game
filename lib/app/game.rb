@@ -64,16 +64,6 @@ class Game
         puts "#{player.name} ! You won !" 
       end
     end
-    
-    def play_again?
-      puts "Do you want to play again ? y/n"
-      choice = gets.chomp
-      until choice == "y" || choice == "n"
-        puts "Please choose between y or n. y for Yes and n for No. bye bye"
-        choice = gets.chomp
-      end
-      return choice
-    end
 
     def run_game
       (1..9).each do |turn|
